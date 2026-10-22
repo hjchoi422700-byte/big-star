@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큰별다함께돌봄센터 - 아이들과 함께 성장하는 행복한 공간</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Noto Sans KR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeed',
+                            100: '#fff3c4',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            primary: '#3b82f6', // Bright Trust Blue
+                            secondary: '#f59e0b', // Warm Star Yellow
+                            accent: '#10b981', // Refreshing Green
+                            softbg: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #eff6ff 0%, #fef3c7 50%, #ecfdf5 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+        }
+        /* Custom slide animation and grid overlay effect */
+        .hero-banner-bg {
+            background-color: #1e40af;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .slide-fade {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-200">
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
+        <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-amber-500">센터소개</a>
+        <a href="#programs" class="block py-2 text-slate-700 font-medium hover:text-amber-500">돌봄 및 프로그램</a>
+        <a href="#features" class="block py-2 text-slate-700 font-medium hover:text-amber-500">센터강점</a>
+        <a href="#notice" class="block py-2 text-slate-700 font-medium hover:text-amber-500">이용안내</a>
+        <a href="#contact" class="block text-center py-3 bg-amber-400 text-slate-900 rounded-xl font-bold shadow-sm">상담 신청하기</a>
+    </div>
+</header>
+
+<!-- Hero Slider Section -->
+<section class="hero-banner-bg relative text-white py-20 lg:py-28 min-h-[560px] flex flex-col justify-between overflow-hidden">
+    <!-- Slide Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+        <!-- Slide Item 1 -->
+        <div class="hero-slide slide-fade space-y-6 max-w-4xl">
+            <p class="text-amber-300 font-semibold text-xs sm:text-sm tracking-wider uppercase">BIG STAR AFTER-SCHOOL CARE</p>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+                돌봄은 권리입니다.<br>
+                우리는 함께 성장합니다.
+            </h1>
+            <p class="text-slate-200 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
+                맞벌이·다자녀 가정을 위한 안전하고 따뜻한 초등 방과 후 돌봄. 아이들이 마음껏 배우고 뛰어놀 수 있는 행복한 터전을 제공합니다.
+            </p>
+            <div class="pt-4">
+                <a href="#contact" class="inline-block px-8 py-4 bg-white text-blue-900 font-bold rounded-xl shadow-lg hover:bg-slate-100 transition-all text-sm sm:text-base">
+                    상담 및 신청하기
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide Item 2 (Hidden by default) -->
+        <div class="hero-slide slide-fade space-y-6 max-w-4xl hidden">
+            <p class="text-amber-300 font-semibold text-xs sm:text-sm tracking-wider uppercase">SAFE & HAPPY ENVIRONMENT</p>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+                안심할 수 있는 공간.<br>
+                따뜻한 선생님이 함께합니다.
+            </h1>
+            <p class="text-slate-200 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
+                전문 자격 교사진의 밀착 지도와 100% 안심 등·하원 서비스로 아이의 일상을 안전하게 케어합니다.
+            </p>
+            <div class="pt-4">
+                <a href="#features" class="inline-block px-8 py-4 bg-white text-blue-900 font-bold rounded-xl shadow-lg hover:bg-slate-100 transition-all text-sm sm:text-base">
+                    센터 강점 보기
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide Item 3 (Hidden by default) -->
+        <div class="hero-slide slide-fade space-y-6 max-w-4xl hidden">
+            <p class="text-amber-300 font-semibold text-xs sm:text-sm tracking-wider uppercase">CREATIVE & FUN PROGRAMS</p>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+                다채로운 학습과 놀이.<br>
+                아이의 가능성을 넓힙니다.
+            </h1>
+            <p class="text-slate-200 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
+                독서 및 과제 지도부터 미슬, 체육, 코딩, 음악 등 매일 색다른 맞춤형 프로그램을 제공합니다.
+            </p>
+            <div class="pt-4">
+                <a href="#programs" class="inline-block px-8 py-4 bg-white text-blue-900 font-bold rounded-xl shadow-lg hover:bg-slate-100 transition-all text-sm sm:text-base">
+                    프로그램 자세히 보기
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Carousel Controls -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12">
+        <div class="flex items-center space-x-6">
+            <!-- Nav buttons -->
+            <div class="flex items-center space-x-3">
+                <button id="prev-slide" class="w-10 h-10 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white/20 transition-colors focus:outline-none" aria-label="Previous Slide">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+                <button id="next-slide" class="w-10 h-10 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white/20 transition-colors focus:outline-none" aria-label="Next Slide">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+
+            <!-- Slide Indicator Dash Lines -->
+            <div class="flex items-center space-x-2">
+                <span class="slide-indicator w-8 h-1 bg-white rounded-full transition-all"></span>
+                <span class="slide-indicator w-4 h-1 bg-white/40 rounded-full transition-all"></span>
+                <span class="slide-indicator w-4 h-1 bg-white/40 rounded-full transition-all"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase text-amber-600 tracking-wider mb-2">ABOUT US</h2>
+                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">아이 한 명 한 명이 반짝이는 큰 별로 자랍니다</p>
+                <p class="mt-4 text-base text-slate-600 leading-relaxed">
+                    큰별다함께돌봄센터는 지역사회와 협력하여 초등학생 아동에게 체계적이고 따뜻한 방과 후 돌봄 서비스를 제공합니다. 
+                    부모님은 안심하고 일상에 집중하고, 아이들은 자율성과 창의성을 키워가는 공간입니다.
+                </p>
+            </div>
+
+            <!-- Key Info Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">이용 대상</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        돌봄이 필요한 초등학생 (1학년~6학년)<br>
+                        *맞벌이, 한부모, 다자녀 가정 우선 선발 지원
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">운영 시간</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        <span class="font-semibold text-slate-800">학기 중:</span> 13:00 ~ 20:00<br>
+                        <span class="font-semibold text-slate-800">방학 중:</span> 09:00 ~ 18:00<br>
+                        *상황에 따른 유연한 상시·일시 돌봄 운영
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">급식 및 간식</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        영양사 자문을 거친 안전하고 균형 잡힌 친환경 간식 및 방학 중 중식 제공 (위생 관리 철저)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase text-amber-600 tracking-wider mb-2">PROGRAMS</h2>
+                <p class="text-3xl font-extrabold text-slate-900 sm:text-4xl">다채롭고 알찬 돌봄 프로그램</p>
+                <p class="mt-4 text-base text-slate-600">아이들의 건강한 성장과 즐거운 배움을 위한 다양화된 맞춤형 일정입니다.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Program Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-800 mb-2">기본 돌봄 & 독서</h4>
+                    <p class="text-xs text-slate-500 mb-4">일상 생활 지도 및 숙제·독서 지도</p>
+                    <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i>학교 과제 및 일기 쓰기 지도</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i>자율 정독 및 독서록 작성</li>
+                    </ul>
+                </div>
+
+                <!-- Program Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-800 mb-2">창의 미슬 & 체육</h4>
+                    <p class="text-xs text-slate-500 mb-4">감성과 신체 발달을 돕는 활동</p>
+                    <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i>만들기, 그리기 예술 수업</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i>실내 신체 표현 & 신나는 체육</li>
+                    </ul>
+                </div>
+
+                <!-- Program Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-800 mb-2">스마트 코딩 & 보드게임</h4>
+                    <p class="text-xs text-slate-500 mb-4">논리력과 협동심 증진</p>
+                    <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>기초 소프트웨어·블록 코딩</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i>창의력 쑥쑥 보드게임 대회</li>
+                    </ul>
+                </div>
+
+                <!-- Program Card 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-800 mb-2">특별 체험 & 음악</h4>
+                    <p class="text-xs text-slate-500 mb-4">풍부한 문화 감성 자극</p>
+                    <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-purple-500 mr-2"></i>1인 1악기 (우쿨렐레/오카리나)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-purple-500 mr-2"></i>시즌별 현장 체험 학습</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-xs font-bold uppercase text-amber-600 tracking-wider mb-2">WHY CHOOSE US</h2>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mb-6 sm:text-4xl">부모님이 안심하고 맡길 수 있는 <br>큰별만의 특별함</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center font-bold">
+                                01
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-800">전문 돌봄 교사 상주</h4>
+                                <p class="text-slate-600 text-sm mt-1">사회복지사 및 보육교사 자격을 갖춘 숙련된 전문 선생님들이 따뜻한 사랑과 책임감으로 아이들을 케어합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold">
+                                02
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-800">쾌적하고 안전한 환경</h4>
+                                <p class="text-slate-600 text-sm mt-1">CCTV 설치, 출입 통제 시스템, 친환경 인테리어 소재 사용으로 아이들이 맘껏 안전하게 뛰어놀 수 있습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-bold">
+                                03
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-800">실시간 소통 서비스</h4>
+                                <p class="text-slate-600 text-sm mt-1">등·하원 알림 문자, 당일 활동 사진 및 키즈 알림장을 통해 학부모님과 투명하고 밀접하게 소통합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 p-8 rounded-3xl border border-amber-100 text-center relative">
+                    <div class="absolute -top-4 -right-4 bg-amber-400 text-slate-900 px-4 py-1.5 rounded-full font-bold text-xs shadow-md">
+                        학부모 후기
+                    </div>
+                    <i class="fa-solid fa-quote-left text-4xl text-amber-300 mb-4 block"></i>
+                    <p class="text-slate-700 italic font-medium leading-relaxed mb-6">
+                        "퇴근이 늦어져 늘 걱정이었는데, 큰별다함께돌봄센터 덕분에 안심하고 일할 수 있게 되었어요. 아이가 센터 가는 시간을 너무 좋아하고 매일 새로운 만들기와 공부도 재미있어해서 정말 만족합니다!"
+                    </p>
+                    <div class="font-bold text-slate-900">초등 2학년 학부모 김OO 님</div>
+                    <div class="text-xs text-slate-500 mt-1">큰별다함께돌봄센터 이용 중</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice & Info Section -->
+    <section id="notice" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase text-amber-400 tracking-wider mb-2">GUIDE</h2>
+                <p class="text-3xl font-extrabold sm:text-4xl">신청 절차 및 이용 안내</p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid md:grid-cols-4 gap-6 text-center">
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700 relative">
+                    <span class="inline-block w-8 h-8 bg-amber-400 text-slate-900 rounded-full font-extrabold text-sm leading-8 mb-4">1</span>
+                    <h4 class="font-bold text-lg mb-2">입소 문의 및 상담</h4>
+                    <p class="text-xs text-slate-400">전화 또는 홈페이지를 통해 상담을 신청합니다.</p>
+                </div>
+
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700 relative">
+                    <span class="inline-block w-8 h-8 bg-amber-400 text-slate-900 rounded-full font-extrabold text-sm leading-8 mb-4">2</span>
+                    <h4 class="font-bold text-lg mb-2">서류 제출</h4>
+                    <p class="text-xs text-slate-400">신청서 및 증빙서류(재직증명서 등)를 제출합니다.</p>
+                </div>
+
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700 relative">
+                    <span class="inline-block w-8 h-8 bg-amber-400 text-slate-900 rounded-full font-extrabold text-sm leading-8 mb-4">3</span>
+                    <h4 class="font-bold text-lg mb-2">심사 및 확정</h4>
+                    <p class="text-xs text-slate-400">우선순위 기준에 따라 이용 대상자를 확정합니다.</p>
+                </div>
+
+                <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700 relative">
+                    <span class="inline-block w-8 h-8 bg-amber-400 text-slate-900 rounded-full font-extrabold text-sm leading-8 mb-4">4</span>
+                    <h4 class="font-bold text-lg mb-2">등원 및 돌봄 시작</h4>
+                    <p class="text-xs text-slate-400">오리엔테이션 후 안전한 돌봄 서비스를 이용합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Left: Contact Form -->
+                <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-md border border-slate-100">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">입소 및 상담 문의</h3>
+                    <p class="text-slate-600 text-sm mb-6">궁금하신 점이 있으시면 언제든 문의 남겨주세요. 친절히 안내해 드립니다.</p>
+                    
+                    <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">학부모 성함 *</label>
+                            <input type="text" required placeholder="예: 홍길동" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">연락처 *</label>
+                                <input type="tel" required placeholder="010-0000-0000" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">아동 학년</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm bg-white">
+                                    <option>초등 1학년</option>
+                                    <option>초등 2학년</option>
+                                    <option>초등 3학년</option>
+                                    <option>초등 4학년</option>
+                                    <option>초등 5학년</option>
+                                    <option>초등 6학년</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">문의 내용</label>
+                            <textarea rows="4" placeholder="희망 이용 학기, 기타 질문 사항을 자유롭게 적어주세요." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold rounded-xl shadow-md transition-all">
+                            상담 신청 보내기
+                        </button>
+                    </form>
+
+                    <!-- Alert message container -->
+                    <div id="form-alert" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold"></div>
+                </div>
+
+                <!-- Right: Location & Info -->
+                <div class="flex flex-col justify-between space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">오시는 길 및 문의</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">주소</h4>
+                                    <p class="text-slate-600 text-sm">경기도 과천시 과천대로8길 68 (갈현동), 큰별다함께돌봄센터</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">전화 문의</h4>
+                                    <p class="text-slate-600 text-sm">02-504-3490 / 010-5750-3490</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">이메일</h4>
+                                    <p class="text-slate-600 text-sm">bigstar_care@email.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="w-full h-64 bg-slate-200 rounded-3xl overflow-hidden relative shadow-inner flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop" 
+                             alt="지도 위치" 
+                             class="w-full h-full object-cover opacity-60">
+                        <div class="absolute inset-0 bg-slate-900/20 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-map-pin text-3xl text-amber-400 mb-2 animate-bounce"></i>
+                            <span class="font-bold text-sm bg-slate-900/80 px-4 py-2 rounded-full">경기도 과천시 갈현동 센터 위치 보기</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-amber-400 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-star text-slate-900 font-black"></i>
+                    </div>
+                    <span class="text-lg font-bold text-white">큰별다함께돌봄센터</span>
+                </div>
+                <div class="text-xs text-slate-500">
+                    © 2026 큰별다함께돌봄센터. All rights reserved.
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-slate-800 text-xs text-slate-500 space-y-1">
+                <p>큰별다함께돌봄센터 | 센터장: 홍길동 | 사업자등록번호: 000-00-00000</p>
+                <p>주소: 경기도 과천시 과천대로8길 68 (갈현동) | 대표전화: 02-504-3490</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hero Slide Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.slide-indicator');
+        const prevBtn = document.getElementById('prev-slide');
+        const nextBtn = document.getElementById('next-slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                } else {
+                    slide.classList.add('hidden');
+                }
+            });
+
+            indicators.forEach((indicator, i) => {
+                if (i === index) {
+                    indicator.classList.remove('bg-white/40', 'w-4');
+                    indicator.classList.add('bg-white', 'w-8');
+                } else {
+                    indicator.classList.remove('bg-white', 'w-8');
+                    indicator.classList.add('bg-white/40', 'w-4');
+                }
+            });
+
+            currentSlide = index;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            let index = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(index);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            let index = (currentSlide + 1) % slides.length;
+            showSlide(index);
+        });
+
+        // Auto slide change every 6 seconds
+        setInterval(() => {
+            let index = (currentSlide + 1) % slides.length;
+            showSlide(index);
+        }, 6000);
+
+        // Interactive Form Submission (No alert/confirm used)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            
+            alertBox.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+            alertBox.classList.add('bg-emerald-100', 'text-emerald-800');
+            alertBox.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> 상담 신청이 성공적으로 접수되었습니다. 곧 연락드리겠습니다!';
+
+            // Reset form
+            document.getElementById('consultation-form').reset();
+
+            // Auto dismiss after 5 seconds
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
